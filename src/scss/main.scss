@@ -1,0 +1,19 @@
+/* MAIN.SCSS
+ * --------------------------------------------------
+ *  Import all seperate files 
+ *  https://sass-guidelin.es/#the-7-1-pattern
+ * -------------------------------------------------- */
+
+@import "utils/functions";
+   
+@import "utils/variables";
+   
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+   
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+   
+@import "utils/mixins";
+   
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+   
+@import "partials/custom";

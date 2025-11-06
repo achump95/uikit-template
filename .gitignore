@@ -1,0 +1,24 @@
+# Dependency folders #
+node_modules/
+
+# Compiled sources #
+build/
+.tmp/
+.sass_cache/
+
+# Archived stuff #
+*.rar
+*.zip
+*.tar
+
+# User generated #
+*.log
+.tmp
+.idea
+.vscode
+.DS_Store
+
+# Hidden files
+*Thumbs.db
+ehthumbs.db
+*~imageoptim*

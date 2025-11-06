@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#181818">
+    <title>Test page - Gulp Sass Nunjucks Boilerplate</title>
+    <meta name="description" content="A front-end boilerplate using Gulp as build tool and Nunjucks as templating engine.">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 10]> 
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a target="_blank" href="http://outdatedbrowser.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="preloader">
+        <div uk-spinner="ratio:2"></div>
+        <noscript>
+            <div class="uk-text-center">
+                <h3>This website requires javascript to work!</h3>
+                <p>Please enable javascript on your browser or try a different browser or device.</p>
+            </div>
+        </noscript>
+    </div>
+    <header class="site-header">
+        <div class="uk-background-default uk-box-shadow-small" uk-sticky="end: body; show-on-up: true; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="uk-navbar-container uk-navbar-transparent">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-navbar" uk-navbar>
+                        <div class="uk-navbar-left">
+                            <a class="uk-navbar-item uk-logo" href="./"><img src="images/logo.svg" alt="Gulp Sass Nunjucks Boilerplate"></a>
+                        </div>
+                        <div class="uk-navbar-right">
+                            <ul class="uk-navbar-nav uk-visible@l">
+                                <li class="">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="uk-parent uk-active">
+                                    <a href="test.html">Test page</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="">
+                                                <a href="test1.html">Filler 1</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="test2.html">Filler 2</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="test3.html">Filler 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-hidden@l uk-margin-small-right">
+                                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#mobile-menu"></a>
+                            </div>
+                            <div class="uk-visible@s">
+                                <a href="#" class="uk-button uk-button-primary uk-margin-small-left">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div class="uk-margin-auto-vertical">
+                    <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
+                        <li class="">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="uk-parent uk-active">
+                            <a href="test.html">Test page <span uk-nav-parent-icon></span></a>
+                            <ul class="uk-nav-sub">
+                                <li class="uk-active">
+                                    <a href="test1.html">Filler 1</a>
+                                </li>
+                                <li class="uk-active">
+                                    <a href="test2.html">Filler 2</a>
+                                </li>
+                                <li class="uk-active">
+                                    <a href="test3.html">Filler 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="uk-margin-xlarge-top">
+                        <a href="#" class="uk-button uk-button-primary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <section class="uk-section uk-section-small uk-position relative">
+            <div class="uk-container uk-container-large">
+                <h1>Test Page</h1>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container uk-container-large">
+                <div class="uk-grid-large" uk-grid>
+                    <div class="uk-width-1-4@l">
+                        <a class="uk-logo uk-display-block uk-margin-bottom" href="/"><img src="images/logo.svg" alt="Gulp Sass Nunjucks Boilerplate"></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="uk-width-3-4@l">
+                        <div class="uk-child-width-1-3@s uk-child-width-1-5@m footer-nav" uk-grid>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                                <h5 class="uk-h5 footer-nav-title">Title</h5>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="uk-h5 footer-nav-title">Title</h5>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="uk-h5 footer-nav-title">Title</h5>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-section uk-section-xsmall">
+            <div class="uk-container uk-container-large">
+                <div class="uk-text-center uk-text-muted uk-text-small">
+                    &copy; <span class="current-year"></span> Gulp Sass Nunjucks Boilerplate | All Rights Reserved | <a class="uk-link-reset" href="#">Privacy Statement</a>
+                </div>
+            </div>
+        </div>
+        <a id="totop" class="totop" href="#" uk-totop uk-scroll></a>
+    </footer>
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

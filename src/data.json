@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "domain": "Gulp Sass Nunjucks Boilerplate",
+        "domain_lower": "a3alive",
+        "description" : "A front-end boilerplate using Gulp as build tool and Nunjucks as templating engine.",
+        "image": "./images/logo.svg"
+    },
+    "navItems": [
+        {
+            "item": "/",
+            "item_pretty": "Home"
+        },
+        {
+            "item": "test.html",
+            "item_pretty": "Test page",
+            "dropdown": true,
+            "pages" : [
+                
+                {
+                    "item": "test1.html",
+                    "item_pretty": "Filler 1"
+                },
+                {
+                    "item": "test2.html",
+                    "item_pretty": "Filler 2"
+                },
+                {
+                    "item": "test3.html",
+                    "item_pretty": "Filler 3"
+                }
+            ]
+        }       
+    ]
+}

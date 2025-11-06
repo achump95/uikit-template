@@ -1,0 +1,62 @@
+/* _VARIABLES.SCSS
+ * --------------------------------------------------
+ *  SASS variables
+ * 
+ *  Colors, fonts, breakpoints, transitions and 
+ *  other variables should be declared here
+ * -------------------------------------------------- */
+
+// Colors
+$white: #ffffff;
+$black: #151c21;
+$blue: #4440D6;
+$yellow: #F8D136; 
+$purple: #BB85E2;
+$light-warning: #FDE2D6;
+$light: #ffffff;
+$greenish-cyan: #03642c;
+$color-primary: #0491f2;
+$color-secondary: #EB484F;
+$color-dark: $black;
+$color-light: #ffffff;
+$color-lighter: #F2F2F2;
+$color-lightest: #FBFBFB;
+$global-border: #b5b5b5;
+$global-emphasis-color: $black;
+
+$global-primary-background: $color-primary;
+$global-secondary-background: $color-secondary;
+$global-muted-background: $color-light;
+$global-inverse-color: $white;
+$base-body-background: $global-inverse-color;
+$global-color: $color-dark;
+
+// Typography
+/* @font-face {
+    font-family: recoleta-regular;
+    src: url(../assets/fonts/recoleta/recoleta-regular-webfont.woff);
+    src: url(../assets/fonts/recoleta/recoleta-regular-webfont.woff2);
+    font-weight: 500;
+}
+@font-face {
+    font-family: recoleta-semibold;
+    src: url(../assets/fonts/recoleta/recoleta-semibold-webfont.woff);
+    src: url(../assets/fonts/recoleta/recoleta-semibold-webfont.woff2);
+    font-weight: 700;
+}
+ */
+
+$base-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$base-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$global-font-size: 16px;
+$global-font-weight-bold: 700;
+
+// breakpoints
+$bp-small: 480px;
+$bp-medium: 768px;
+$bp-normal: 960px;
+$bp-large: 1200px;
+$bp-xlarge: 1500px;
+
+// transitions
+$cubic: cubic-bezier(.64,.09,.08,1);

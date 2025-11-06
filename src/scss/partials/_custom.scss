@@ -1,0 +1,113 @@
+/* _CUSTOM.SCSS
+ * --------------------------------------------------
+ *  Custom styles should be declared here
+ * -------------------------------------------------- */
+
+ html {
+    background: $color-lightest;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 2160px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $base-body-background;
+    box-shadow: $global-medium-box-shadow;
+}
+
+.preloader {
+    position: fixed;
+    z-index: 9999;
+    background: $base-body-background;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s all ease;
+    pointer-events: none;
+    img {
+        max-width: 50px;
+        height: auto;
+    }
+    .uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+        stroke: $global-primary-background;
+    }
+    .uk-spinner > * > * {
+        stroke-width: 1px !important;
+        r: 13 !important;
+    }
+}
+
+body.page-loaded {
+    .preloader {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.site-header {
+    .uk-logo {
+        img {
+            width: 110px;
+            padding: 15px 0;
+        }
+    }
+}
+
+.site-main {
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.site-footer {
+    .uk-logo {
+        img {
+            width: 110px;
+        }
+    }
+
+    .footer-nav {
+        .footer-nav-title {
+            font-weight: $global-font-weight-bold;
+            color: $color-primary;
+        }
+    }
+}
+
+a.totop.uk-totop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    background: $global-border;
+    border-radius: 50%;
+    box-shadow: $global-medium-box-shadow;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 990;
+    &:not(.uk-active) {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        pointer-events: none;
+    }
+    &.uk-active {
+        opacity: 1;
+    }
+    &:hover {
+        background: $global-primary-background;
+        color: #FFF;
+    }
+}

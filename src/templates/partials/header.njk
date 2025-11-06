@@ -1,0 +1,86 @@
+<header class="site-header">
+    <div class="uk-background-default uk-box-shadow-small" uk-sticky="end: body; show-on-up: true; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container uk-navbar-transparent">
+            <div class="uk-container uk-container-large">
+                <div class="uk-navbar" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="./"><img src="{{ meta.image }}" alt="{{ meta.domain }}"></a>
+                    </div>
+                    <div class="uk-navbar-right">
+
+                        <ul class="uk-navbar-nav uk-visible@l">
+                            {# loop through navItems in data.json and apply active link #}
+                            {% for item in navItems %}
+                                {% if item.dropdown %}
+                                    <li class="uk-parent {% if item.item == slug|lower %}uk-active{% endif %}">
+                                        <a href="{% if subName and item.item == '/' %}..{% elif subName %}../{% endif %}{{ item.dir + item.item if item.dir else item.item }}">{{ item.item_pretty }}</a>
+                                        <div class="uk-navbar-dropdown">
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                {% for page in item.pages %}
+                                                    <li class="{% if page.item|lower == slug|lower %}uk-active{% endif %}">
+                                                        <a href="{% if subName and item.item == '/' %}..{% elif subName %}../{% endif %}{{ page.dir + page.item if page.dir else page.item }}">{{ page.item_pretty }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                {% else %}
+                                    <li class="{% if item.item|lower == slug|lower %}uk-active{% endif %}">
+                                        <a href="{% if subName and item.item == '/' %}..{% elif subName %}../{% endif %}{{ item.dir + item.item if item.dir else item.item }}">{{ item.item_pretty }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+
+                        <div class="uk-hidden@l uk-margin-small-right">
+                            <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#mobile-menu"></a>
+                        </div>
+
+                        <div class="uk-visible@s">
+                            <a href="#" class="uk-button uk-button-primary uk-margin-small-left">Get In Touch</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-margin-auto-vertical">
+
+                <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
+                    {# loop through navItems in data.json and apply active link #}
+                    {% for item in navItems %}
+                        {% if item.dropdown %}
+                            <li class="uk-parent {% if item.item|lower == slug|lower %}uk-active{% endif %}">
+                                <a href="{% if subName and item.item == '/' %}..{% elif subName %}../{% endif %}{{ item.dir + item.item if item.dir else item.item }}">{{ item.item_pretty }} <span uk-nav-parent-icon></span></a>
+                                <ul class="uk-nav-sub">
+                                    {% for page in item.pages %}
+                                        <li class="{% if item.item|lower == slug|lower %}uk-active{% endif %}">
+                                            <a href="{% if subName %}../{% endif %}{{ page.dir + page.item if page.dir else page.item }}">{{ page.item_pretty }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li class="{% if item.item|lower == slug|lower %}uk-active{% endif %}">
+                                <a href="{% if subName and item.item == '/' %}..{% elif subName %}../{% endif %}{{ item.dir + item.item if item.dir else item.item }}">{{ item.item_pretty }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <div class="uk-margin-xlarge-top">
+                    <a href="#" class="uk-button uk-button-primary">Get In Touch</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</header>

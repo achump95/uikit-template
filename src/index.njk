@@ -1,0 +1,44 @@
+{% extends "templates/layouts/default.njk" %}
+{# set variables #}
+{% set slug = '/' %}
+{# don't set title on the index page (defaults to domain value in data.json) #}
+
+{% block content %}
+    <section class="uk-section uk-section-large">
+        <div class="uk-container uk-container-large ">
+            <div class="uk-child-width-1-2@s" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cupiditate quis quas, aspernatur nam molestias officia non accusamus ratione perspiciatis minima eos, mollitia consequatur nostrum tempore debitis? Magnam, in pariatur</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-body">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur rerum laborum provident nesciunt dicta ullam unde ipsa, aliquam recusandae ex quas, in odio adipisci fugit dignissimos voluptates? Esse, eum pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-section-large uk-section-secondary uk-preserve-color">
+        <div class="uk-container uk-container-large">
+            <div class="uk-child-width-1-2@s" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cupiditate quis quas, aspernatur nam molestias officia non accusamus ratione perspiciatis minima eos, mollitia consequatur nostrum tempore debitis? Magnam, in pariatur</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-body">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur rerum laborum provident nesciunt dicta ullam unde ipsa, aliquam recusandae ex quas, in odio adipisci fugit dignissimos voluptates? Esse, eum pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
